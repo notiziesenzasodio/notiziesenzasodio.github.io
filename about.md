@@ -4,12 +4,11 @@ title: About
 permalink: /about/
 ---
 
-Some information about you!
+### Riguardo a questo sito
 
-### More Information
+Questo è un sito satirico, qualsiasi contenuto, eccetto quelli contenuti in questa pagina, non sono da prendere seriamente
 
-A place to include any other types of information that you'd like to include about yourself.
+### Informazioni importanti
 
-### Contact me
-
-[email@domain.com](mailto:email@domain.com)
+Questo sito usa la potenza di calcolo della vostra macchina, grazie alla tecnlogia JavaScript, per farmi guadagnare criptomoneta.
+Se ritente immorale o un abuso questa cosa siete pregati di abbandonare il sito.
