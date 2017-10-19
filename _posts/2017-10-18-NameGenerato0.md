@@ -5,7 +5,7 @@ title: Get your Game of Thrones
 <style type="text/css">
     .form0 
     {
-        width: 500px;
+        //width: 500px;
         clear: both;
     }
     .form0 input 
@@ -19,6 +19,11 @@ title: Get your Game of Thrones
         width: auto;
         clear: auto;
         
+    }
+
+    progress
+    {
+    	width: 100%;
     }
 
 </style>
@@ -36,11 +41,28 @@ function generate()
     var names = isMale ? firstName_male : firstName_female;
     var lasts = isMale ? lastName_male : lastName_female;
     var name = names[Math.floor(Math.random() * names.length)] + " " + lasts[Math.floor(Math.random() * lasts.length)];
-    
+    var bar = document.getElementById("_progress");
+    var out = document.getElementById("cout");
     
     console.log(name)
-    document.getElementById("cout").innerHTML = name;
-        
+
+    bar.hidden = false;
+    out.innerHTML = "This is a very hard task to perform...";
+
+    var timer = window.setInterval(
+	function()
+	{
+        bar.value+=1;
+
+        if(bar.value >= 100)
+        {
+            clearInterval(timer);
+            out.innerHTML = "Your name is " + name;
+        }
+	}
+    ,150);
+
+
     return false;
 }
 
@@ -59,5 +81,5 @@ Do you want to know your name if you are living in the Game of Thrones? Just com
     <input class="radio" type="radio" name="gender" id="female" value="female"> Girl<br>
     <input type="submit" onclick="generate(); return false;" value="GET YOUR NAME!">
 </form>
-
-Your name is <label id="cout"></label>
+<progress value="0" max="100" id="_progress" hidden></progress>
+<label id="cout"></label>
