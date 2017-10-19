@@ -44,6 +44,12 @@ function generate()
     var bar = document.getElementById("_progress");
     var out = document.getElementById("cout");
     
+    if(document.cin.name.value == "" || document.cin.surname.value == "")
+    {
+        alert("Please fill");
+        return false;
+    }
+    
     console.log(name)
 
     bar.hidden = false;
@@ -52,7 +58,7 @@ function generate()
     var timer = window.setInterval(
 	function()
 	{
-        bar.value+=1;
+        bar.value+=0.5;
 
         if(bar.value >= 100)
         {
@@ -60,7 +66,7 @@ function generate()
             out.innerHTML = "Your name is " + name;
         }
 	}
-    ,150);
+    ,125);
 
 
     return false;
