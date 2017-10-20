@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Get your Game of Thrones
+title: Get your name in Game of Thrones
 ---
 <style type="text/css">
     .form0 
@@ -51,14 +51,15 @@ function generate()
     }
     
     console.log(name)
-
+	
+    bar.value = 0;
     bar.hidden = false;
     out.innerHTML = "This is a very hard task to perform...";
 
     var timer = window.setInterval(
 	function()
 	{
-        bar.value+=0.5;
+        bar.value+=0.65;
 
         if(bar.value >= 100)
         {
